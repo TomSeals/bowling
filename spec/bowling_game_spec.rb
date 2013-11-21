@@ -11,6 +11,7 @@ describe BowlingGame do
       expect(game.rolls).to eq([])
     end
   end
+  
   describe '#score' do
     context 'when only gutter balls are thrown' do
       it 'scores the game as 0' do

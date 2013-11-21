@@ -4,7 +4,7 @@ class BowlingGame
 
   def initialize
     @rolls = []
-    @total_score = 0
+    @total_score  = 0
     @current_roll = 0
   end
 
@@ -14,7 +14,7 @@ class BowlingGame
   #
   # Returns nothing.
   def roll(pins)
-    @rolls << pins
+    @rolls.push(pins)
   end
 
   # Returns the Integer score for this game. Expects to be run after all rolls
