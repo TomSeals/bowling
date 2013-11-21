@@ -28,7 +28,7 @@ class BowlingGame
       elsif spare?
         score_spare
       else
-        score_rolls
+        score_normal
       end
     end
 
@@ -41,7 +41,7 @@ class BowlingGame
   #
   # Returns nothing
   def init_roll
-    @rolls     = @rolls[@current_roll]
+    @roll      = @rolls[@current_roll]
     @next_roll = @rolls[@current_roll + 1]
   end
 
@@ -72,7 +72,7 @@ class BowlingGame
   end
 
   # Scores all other rolls that aren't a strike or spare
-  def score_rolls
+  def score_normal
     @total_score += @roll + @next_roll
     @current_roll += 2
   end
